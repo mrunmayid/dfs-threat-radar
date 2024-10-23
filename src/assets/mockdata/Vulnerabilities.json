@@ -1,0 +1,34 @@
+{
+  "Vulnerabilities": [
+    {
+      "Assignment Group": "Authentication",
+      "State": "Open",
+      "VIT": "VIT123",
+      "Risk Rating": "Critical",
+      "Summary": "This could allow the attacker with control over Thread context map",
+      "Results": "org.apache.logging.log4j",
+      "Configuration Item": "login-api",
+      "Remediation Target": "2024-12-31"
+    },
+    {
+      "Assignment Group": "Login",
+      "State": "Open",
+      "VIT": "VIT456",
+      "Risk Rating": "Moderate",
+      "Summary": "Component has got apache vulnerability making it prone to attack",
+      "Results": "org.apache.logging.log4j.log4j",
+      "Configuration Item": "mobile-api",
+      "Remediation Target": "2024-12-31"
+    },
+    {
+      "Assignment Group": "SSO",
+      "State": "Progress",
+      "VIT": "VIT789",
+      "Risk Rating": "Critical",
+      "Summary": "Spring version is not safe for threads",
+      "Results": "org.eclipse.jetty.http2",
+      "Configuration Item": "login-ui",
+      "Remediation Target": "2024-12-31"
+    }
+  ]
+}
