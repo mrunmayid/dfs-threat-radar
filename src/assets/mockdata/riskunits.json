@@ -1,0 +1,40 @@
+{
+  "RiskUnits": [
+    {
+      "Assignment Group": "Authentication",
+      "State": "Open",
+      "RiskID": 123,
+      "Detection Source": "Standard Assurance",
+      "Detection Method": "Assessment",
+      "Submitted by": "Gurjot",
+      "Submit Date": "2024-11-10",
+      "Remediation Due Date": "2024-12-31",
+      "Title": "mobile encryption",
+      "Description": "code has some vulnerabilities"
+    },
+    {
+      "Assignment Group": "Login",
+      "State": "Open",
+      "RiskID": 456,
+      "Detection Source": "Standard Assurance",
+      "Detection Method": "Assessment",
+      "Submitted by": "Venkat",
+      "Submit Date": "2024-11-12",
+      "Remediation Due Date": "2024-12-31",
+      "Title": "mobile encryption",
+      "Description": "code has some vulnerabilities"
+    },
+    {
+      "Assignment Group": "SSO",
+      "State": "Progress",
+      "RiskID": 789,
+      "Detection Source": "Standard Assurance",
+      "Detection Method": "Assessment",
+      "Submitted by": "San",
+      "Submit Date": "2024-11-15",
+      "Remediation Due Date": "2024-12-31",
+      "Title": "mobile encryption",
+      "Description": "code has some vulnerabilities"
+    }
+  ]
+}
