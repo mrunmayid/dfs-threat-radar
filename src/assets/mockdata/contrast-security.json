@@ -1,0 +1,22 @@
+{
+  "contrast-security" : [
+    {
+      "Assignment Group": "Authentication",
+      "Custom Code Score": 80,
+      "Library Score": 87,
+      "Overall Score": 80
+    },
+    {
+      "Assignment Group": "Login",
+      "Custom Code Score": 65,
+      "Library Score": 45,
+      "Overall Score": 60
+    },
+    {
+      "Assignment Group": "SSO",
+      "Custom Code Score": 60,
+      "Library Score": 78,
+      "Overall Score": 65
+    }
+  ]
+}

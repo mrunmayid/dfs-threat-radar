@@ -1,0 +1,28 @@
+{
+  "NexusIqIssues" : [
+    {
+      "Assignment Group": "Authentication",
+      "Threat": 10,
+      "Policy": "Security-Critical-Banned",
+      "Component": "org.springframework : spring-web flux : 5.3.31",
+      "Policy Violations": "Found security vulnerabilities CVE-2024-11111",
+      "Risk Remediations": "Upgrade to 6.1.14"
+    },
+    {
+      "Assignment Group": "Login",
+      "Threat": 10,
+      "Policy": "Security-Critical-Banned",
+      "Component": "org.springframework : spring-webmvc: 5.3.31",
+      "Policy Violations": "Found security vulnerabilities CVE-2024-11112",
+      "Risk Remediations": "Upgrade to 6.1.12"
+    },
+    {
+      "Assignment Group": "SSO",
+      "Threat": 8,
+      "Policy": "Security-High-Warning",
+      "Component": "io.micrometer : micrometer-registry-statsd",
+      "Policy Violations": "Found security vulnerabilities CVE-2024-11113",
+      "Risk Remediations": "Upgrade to 6.1.16"
+    }
+  ]
+}
