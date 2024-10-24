@@ -1,21 +1,30 @@
-import { useState } from 'react'
-import './App.css'
-import { Button } from '@mui/material'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Dashboard from './Dashboard';
+import Home from './Home';
+import './App.css'; // Import the CSS file
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>
-      <h1>DFS Threat Radar.</h1>
-      <div className="card">
-        <Button variant="outlined" onClick={() => setCount((count) => count + 1)}>Count: {count}</Button>
+    <Router>
+      <div>
+        <nav>
+          <ul className="tab-list">
+            <li className="tab-item">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="tab-item">
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
       </div>
-      <p className="read-the-docs">
-        A single dashboard to track all you code vulnerabilities.
-      </p>
-    </>
-  )
-}
+    </Router>
+  );
+};
 
-export default App
+export default App;
