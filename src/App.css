@@ -1,8 +1,8 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 2rem;
   padding: 2rem;
-  text-align: center;
+  display:flex;
 }
 
 .logo {
@@ -37,8 +37,13 @@
   padding: 2em;
 }
 
-.read-the-docs {
+
+
+body {
+  background-color: white;
   color: #888;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .tab-list {
@@ -69,4 +74,31 @@
   border-color: #ccc;
   border-bottom-color: transparent;
   background-color: #fff;
+}
+
+.tab-item a.active {
+  border-color: #ccc;
+  border-bottom-color: transparent;
+  background-color: #fff;
+}
+.short-div {
+  width: 100px;
+  height: 50px;
+  margin: 10px 0;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
 }
