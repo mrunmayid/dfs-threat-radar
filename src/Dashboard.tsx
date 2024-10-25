@@ -106,7 +106,7 @@ const Dashboard: React.FC = () => {
   };
 
   const barChartData = {
-    labels: ["", "June", "July", "August", "Sept", "Oct"],
+    labels: ["May", "June", "July", "August", "Sept", "Oct"],
     datasets: [
       {
         label: "Distribution of Risk Score. Lowest to Highest",
@@ -137,7 +137,7 @@ const Dashboard: React.FC = () => {
     datasets: [
       {
         label: "Average Age Of Open Vulnerability",
-        data: [0, 5, 10, 15, 20],
+        data: [2, 5, 10, 15, 20],
         backgroundColor: ["#b6141a", "#d04437", "#fd7922", "#fdad2b"],
         borderColor: ["#b6141a", "#d04437", "#fd7922", "#fdad2b"],
         borderWidth: 1,
@@ -190,7 +190,7 @@ const Dashboard: React.FC = () => {
             component="div"
             style={{ textAlign: "center" }}
           >
-            Number of Vulnerabilities by Service Risk Units
+            Number of Vulnerabilities tracked by month
           </Typography>
           <Bar data={barChartData} options={options} />
         </div>
