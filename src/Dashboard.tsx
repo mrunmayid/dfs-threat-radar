@@ -49,11 +49,11 @@ const StyledBusinessUnits = styled.div<{ bgColor: string }>(({ bgColor }) => ({
   },
 }));
 
-const RiskScoreCircle = styled("div")({
+const RiskScore = styled("div")({
   width: "10rem",
   height: "10rem",
   backgroundColor: "orange",
-  borderRadius: "50%",
+  borderRadius: "5%",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -164,12 +164,12 @@ const Dashboard: React.FC = () => {
       </Container>
 
       <ChartContainer>
-        <RiskScoreCircle>
+        <RiskScore>
           <Typography variant="body2" component="div">
             Average Risk Score
           </Typography>
           <p>6/10</p>
-        </RiskScoreCircle>
+        </RiskScore>
         <div style={{ width: "50%" }}>
           <Typography
             variant="h6"
