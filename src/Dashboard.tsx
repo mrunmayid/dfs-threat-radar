@@ -1,7 +1,8 @@
-import { Typography } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import React from "react";
 import { Doughnut, Bar } from "react-chartjs-2";
 import styled from "styled-components";
+import issuesData from "./assets/completeIssuesJson";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -12,6 +13,7 @@ import {
   Legend,
   ArcElement,
 } from "chart.js";
+import IssuesTable from "./IssuesTable";
 
 ChartJS.register(
   CategoryScale,
@@ -70,6 +72,25 @@ const ChartContainer = styled("div")({
   display: "flex",
   justifyContent: "space-around",
 });
+const TableWrapper = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  p: {
+    marginBottom: "0",
+    fontSize: "1.5rem",
+    color: "#333",
+  },
+});
+
+const StyledLink = styled(Link)({
+  "&.MuiLink-root": { color: "#fff", textDecorationColor: "#fff" },
+});
+
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+`;
 
 const Dashboard: React.FC = () => {
   const doughnutChatData = {
@@ -126,19 +147,19 @@ const Dashboard: React.FC = () => {
       <Container>
         <StyledBusinessUnits bgColor="#52c6ff">
           <h3>Total Risk Units</h3>
-          <p>3</p>
+          <StyledLink href="#risk-units-table">3</StyledLink>
         </StyledBusinessUnits>
         <StyledBusinessUnits bgColor="#d71216">
           <h3>Total Nexus Issues</h3>
-          <p>3</p>
+          <StyledLink href="#nexus-issues-table">3</StyledLink>
         </StyledBusinessUnits>
         <StyledBusinessUnits bgColor="#fd7922">
           <h3>Total Container Vulnerabilities</h3>
-          <p>2</p>
+          <StyledLink href="#vulnerabilities-table">3</StyledLink>
         </StyledBusinessUnits>
         <StyledBusinessUnits bgColor="#fed077">
-          <h3>Total Secrity Issues</h3>
-          <p>3</p>
+          <h3>Total Security Issues</h3>
+          <StyledLink href="#security-table">3</StyledLink>
         </StyledBusinessUnits>
       </Container>
 
@@ -167,20 +188,32 @@ const Dashboard: React.FC = () => {
               component="div"
               style={{ textAlign: "center" }}
             >
-              Application Compliance
+              Application Security
             </Typography>
             <Doughnut data={doughnutChatData} />
           </div>
         </section>
       </ChartContainer>
+
+      <TableWrapper id="nexus-issues-table">
+        <p>Nexus Issues</p>
+        <IssuesTable data={issuesData.NexusIqIssues} />
+      </TableWrapper>
+      <TableWrapper id="vulnerabilities-table">
+        <p>Vulnerabilities from Service Now</p>
+        <IssuesTable data={issuesData.Vulnerabilities} />
+      </TableWrapper>
+
+      <TableWrapper id="risk-units-table">
+        <p>Risk Units</p>
+        <IssuesTable data={issuesData.RiskUnits} />
+      </TableWrapper>
+      <TableWrapper id="security-table">
+        <p>Security Issues</p>
+        <IssuesTable data={issuesData.Security} />
+      </TableWrapper>
     </div>
   );
 };
-
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-`;
 
 export default Dashboard;
