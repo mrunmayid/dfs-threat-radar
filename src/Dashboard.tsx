@@ -106,7 +106,7 @@ const Dashboard: React.FC = () => {
   };
 
   const barChartData = {
-    labels: ["May", "June", "July", "August", "Sept", "Oct"],
+    labels: ["", "June", "July", "August", "Sept", "Oct"],
     datasets: [
       {
         label: "Distribution of Risk Score. Lowest to Highest",
@@ -127,6 +127,19 @@ const Dashboard: React.FC = () => {
           "rgba(54, 162, 235, 0.2)",
           "rgba(153, 102, 255, 0.2)",
         ],
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const openDaysData = {
+    labels: ["Critical", "High", "Medium", "Low"],
+    datasets: [
+      {
+        label: "Average Age Of Open Vulnerability",
+        data: [0, 5, 10, 15, 20],
+        backgroundColor: ["#b6141a", "#d04437", "#fd7922", "#fdad2b"],
+        borderColor: ["#b6141a", "#d04437", "#fd7922", "#fdad2b"],
         borderWidth: 1,
       },
     ],
@@ -170,17 +183,20 @@ const Dashboard: React.FC = () => {
           </Typography>
           <p>6/10</p>
         </RiskScore>
+
         <div style={{ width: "50%" }}>
           <Typography
             variant="h6"
             component="div"
             style={{ textAlign: "center" }}
           >
-            Risk Distibution
+            Number of Vulnerabilities by Service Risk Units
           </Typography>
           <Bar data={barChartData} options={options} />
         </div>
+      </ChartContainer>
 
+      <ChartContainer>
         <section>
           <div style={{ width: "100%" }}>
             <Typography
@@ -193,6 +209,17 @@ const Dashboard: React.FC = () => {
             <Doughnut data={doughnutChatData} />
           </div>
         </section>
+
+        <div style={{ width: "50%" }}>
+          <Typography
+            variant="h6"
+            component="div"
+            style={{ textAlign: "center" }}
+          >
+            Avg. Age of Open Vulnerabilities (Days)
+          </Typography>
+          <Bar data={openDaysData} options={options} />
+        </div>
       </ChartContainer>
 
       <TableWrapper id="nexus-issues-table">
